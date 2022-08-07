@@ -1,13 +1,33 @@
 function Login() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const [status, setStatus] = React.useState("");
   const ctx = React.useContext(UserContext);
+
+  function validate(field, label) {
+    if (!field) {
+      setStatus("Error: " + label);
+      setTimeout(() => setStatus(""), 3000);
+      return false;
+    }
+    return true;
+  }
+
+  function handleLogin() {
+    console.log(email, password);
+    if (!validate(email, "Email ID")) return;
+    if (!validate(password, "Password")) return;
+    // TODO: login user (functionality - check if user's email address and password is correct)
+    // If user email and password correct: display "User logged in as email address" and Logout button
+    // If not correct, throw error "Email/password incorrect"
+  }
   return (
     <>
       <Card
         bgcolor="light"
         header="Login"
         txtcolor="black"
+        status={status}
         body={
           <>
             Email
@@ -35,7 +55,7 @@ function Login() {
             <button
               type="submit"
               className="btn btn-primary"
-              onClick={() => console.log("Login clicked")}
+              onClick={handleLogin}
             >
               Login
             </button>
