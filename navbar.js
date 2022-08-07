@@ -16,22 +16,22 @@ function NavBar() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="#/CreateAccount/">Create Account</a>
+                <Link className="nav-link" to="/CreateAccount/">Create Account</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#/login/">Login</a>
+                <Link className="nav-link" to="/login/">Login</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#/deposit/">Deposit</a>
+                <Link className="nav-link" to="/deposit/">Deposit</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#/withdraw/">Withdraw</a>
+                <Link className="nav-link" to="/withdraw/">Withdraw</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#/balance/">Balance</a>
+                <Link className="nav-link" to="/balance/">Balance</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#/alldata/">AllData</a>
+                <Link className="nav-link" to="/alldata/">AllData</Link>
               </li>
             </ul>
           </div>
