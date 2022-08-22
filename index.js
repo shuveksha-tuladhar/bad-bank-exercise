@@ -1,7 +1,13 @@
+
+
 function Spa() {
   return (
     <HashRouter>
+       
+
       <NavBar />
+      
+
       <UserContext.Provider
         value={{
           users: [
@@ -21,6 +27,8 @@ function Spa() {
         <Route path="/withdraw/" component={Withdraw} />
         <Route path="/alldata/" component={AllData} />
       </UserContext.Provider>
+     
+
     </HashRouter>
   );
 }

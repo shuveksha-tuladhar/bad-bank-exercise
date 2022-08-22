@@ -1,4 +1,6 @@
 function NavBar() {
+
+  const[active, setActive]= React.useState(false)
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -16,7 +18,7 @@ function NavBar() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link" to="/CreateAccount/">Create Account</Link>
+                <Link className={`nav-link `} to="/CreateAccount/"  >Create Account</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/login/">Login</Link>

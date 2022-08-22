@@ -10,7 +10,10 @@ function Card(props){
         return 'card mb-3' + bg + txt; 
     }
     return (
-        <div className={classes()} style={{maxWidth: "18rem"}}>
+        <div className="d-flex align-items-center justify-content-between h-100 mt-5">
+        <div className="shadow"
+        // className={classes()} 
+        style={{width: "25rem", margin:'auto'}}>
             <div className="card-header" style={{background: "skyblue"}}>{props.header}</div>
             <div className="card-body">
                 {props.title && (<h5 className="card-title">{props.title}</h5>)}
@@ -18,6 +21,7 @@ function Card(props){
                 {props.body}
                 {props.status && (<div id='createStatus'>{props.status}</div>)}
             </div>
+        </div>
         </div>
     )
 }

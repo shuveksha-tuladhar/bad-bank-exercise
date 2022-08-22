@@ -23,7 +23,12 @@ function Login() {
   }
   return (
     <>
-      <Card
+   <div className="row no-gutters mt-5">
+    <div className="col-lg-6 text-center border-right">
+<img src="bank.webp" alt="Bank" />
+    </div>
+    <div className="col-lg-6 mx-auto" >
+    <Card classes="mx-auto"
         bgcolor="light"
         header="Login"
         txtcolor="black"
@@ -62,6 +67,12 @@ function Login() {
           </>
         }
       />
+  
+    </div>
+   </div>
+
+   
+
     </>
   );
 }
